@@ -109,7 +109,8 @@ The project achieves five measurable analytical goals aligned with university st
 
 #### 1. Students Table
 Stores student demographic and academic information.
-![Screenshot 2026-02-08 152000](https://github.com/user-attachments/assets/5fc98fe4-4713-40b4-9c1f-648e8702835a)
+![Table student](https://github.com/user-attachments/assets/40df6ec1-fcc3-4123-a6fc-b878674204ee)
+
 
 
 **Purpose:** Track student demographics, departmental affiliation, and cumulative GPA for performance analysis and advising.
@@ -120,16 +121,8 @@ Stores student demographic and academic information.
 
 #### 2. Courses Table
 Course catalog with scheduling and instructor assignment.
+![Table course](https://github.com/user-attachments/assets/1f34de37-9643-4129-9795-9860461db7ce)
 
-| Column | Data Type | Constraint |
-|--------|-----------|------------|
-| course_id | INT | PRIMARY KEY |
-| course_name | VARCHAR(100) | NOT NULL |
-| course_code | VARCHAR(20) | UNIQUE, NOT NULL |
-| department | VARCHAR(50) | NOT NULL, CHECK (5 departments) |
-| credits | INT | NOT NULL, CHECK (1-6 credits) |
-| semester | VARCHAR(20) | NOT NULL, CHECK (Fall 2024 - Spring 2026) |
-| instructor_name | VARCHAR(100) | NOT NULL |
 
 **Purpose:** Manage course offerings, track enrollment capacity, and enable semester-based scheduling analysis.
 
@@ -140,14 +133,8 @@ Course catalog with scheduling and instructor assignment.
 #### 3. Enrollments Table
 Transactional data linking students to course registrations.
 
-| Column | Data Type | Constraint |
-|--------|-----------|------------|
-| enrollment_id | INT | PRIMARY KEY |
-| student_id | INT | FOREIGN KEY → Students(student_id) |
-| course_id | INT | FOREIGN KEY → Courses(course_id) |
-| enrollment_date | DATE | NOT NULL |
-| grade | VARCHAR(2) | CHECK (A, A-, B+, B, B-, C+, C, C-, D, F, NULL) |
-| status | VARCHAR(20) | NOT NULL, CHECK (Active, Completed, Dropped, Withdrawn) |
+![Table enrollement](https://github.com/user-attachments/assets/388941c1-b6b9-4868-955e-7b5a27d5ad2b)
+
 
 **Unique Constraint:** (student_id, course_id) - prevents duplicate enrollments
 
