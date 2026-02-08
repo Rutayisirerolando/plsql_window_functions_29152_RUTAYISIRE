@@ -3,10 +3,10 @@
 # University Academic Management System - SQL Analysis Project
 
 **Student Names:** Rutayisire Gihozo Rolando  
-**Student ID: 29152  
-**Course:**  INSY 8311 - Database Development with PL/SQL 
+**Student ID:** 29152  
+**Course:** INSY 8311 - Database Development with PL/SQL
 **Instructor:** Eric Maniraguha
-**Institution:** Adventist University of Central Africa (AUCA) 
+**Institution:** Adventist University of Central Africa (AUCA)
 **Assignment:** Individual Assignment I - SQL JOINs & Window Functions  
 
 ---
