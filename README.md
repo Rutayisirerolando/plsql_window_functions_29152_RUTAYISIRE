@@ -186,7 +186,7 @@ ORDER BY e.enrollment_date DESC;
 **Business Interpretation:**  
 This query returns all current course registrations with complete student and course details. Academic advisors use this to monitor student course loads, identify students taking courses outside their major (potential double majors), and ensure equitable enrollment distribution across course sections. The result excludes dropped or withdrawn enrollments, providing a clean view of active academic commitments.
 
-**Screenshot:** `screenshots/01_inner_join.png`
+
 
 ---
 
@@ -211,7 +211,7 @@ ORDER BY s.enrollment_year DESC;
 **Business Interpretation:**  
 Inactive students represent a critical retention failure point. These students completed admission but never attended classes, indicating problems with orientation, financial aid delays, or inadequate onboarding. The retention office should conduct immediate outreach with personalized support (financial counseling, academic planning) to recover these students before they formally withdraw, improving retention rates by an estimated 10-15%.
 
-**Screenshot:** `screenshots/02_left_join.png`
+
 
 ---
 
@@ -237,7 +237,7 @@ ORDER BY c.semester, c.department;
 **Business Interpretation:**  
 Courses with zero enrollments waste faculty resources and classroom space. The registrar should either cancel these courses before semester start (saving estimated $5,000-15,000 per course in instructor costs) or implement targeted marketing (email campaigns to relevant majors, prerequisite waivers) to boost enrollment. Persistent zero-enrollment courses indicate curriculum misalignment requiring program review.
 
-**Screenshot:** `screenshots/03_right_join.png`
+
 
 ---
 
@@ -266,7 +266,7 @@ ORDER BY record_status;
 **Business Interpretation:**  
 This comprehensive view reveals systemic enrollment gaps requiring strategic intervention. Administration can simultaneously identify at-risk students (no enrollments) and underutilized courses (no students) to make data-driven decisions about course cancellations, student outreach, and resource reallocation. This holistic perspective prevents siloed problem-solving and enables coordinated action across departments.
 
-**Screenshot:** `screenshots/04_full_outer_join.png`
+
 
 ---
 
@@ -291,7 +291,7 @@ ORDER BY s1.department, gpa_difference;
 **Business Interpretation:**  
 This query identifies optimal peer pairings within departments, matching high-GPA students with struggling students for tutoring relationships. Research shows peer tutoring improves retention by 15-20% and increases GPAs by 0.2-0.4 points. Academic affairs can formalize these pairings through structured mentorship programs, offering course credit or service-learning hours to incentivize high-performing students to mentor peers.
 
-**Screenshot:** `screenshots/05_self_join.png`
+
 
 ---
 
@@ -317,7 +317,7 @@ ORDER BY gpa DESC;
 
 **Business Interpretation:** ROW_NUMBER assigns unique rankings essential for competitive scholarship selection where ties cannot share awards. Top 5 students university-wide receive presidential scholarships ($10,000 each), while top 3 per department receive departmental awards ($5,000 each). This ensures fair distribution across all programs regardless of varying departmental GPA scales or difficulty levels.
 
-**Screenshot:** `screenshots/06_row_number.png`
+
 
 ---
 
@@ -336,7 +336,7 @@ ORDER BY enrollment_rank;
 
 **Business Interpretation:** RANK properly handles ties in course enrollment while creating gaps in subsequent rankings. Two courses with identical 25 enrollments both rank #3, with the next course at #5. High-ranked courses (top 20%) may need additional sections to meet demand, while low-ranked courses (bottom 20%) face cancellation unless minimum enrollment thresholds are met through targeted recruitment.
 
-**Screenshot:** `screenshots/07_rank.png`
+
 
 ---
 
