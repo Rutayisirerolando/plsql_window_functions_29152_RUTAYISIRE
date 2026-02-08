@@ -201,6 +201,7 @@ INNER JOIN Courses c ON e.course_id = c.course_id
 WHERE e.status = 'Active'
 ORDER BY e.enrollment_date DESC;
 ```
+![Screenshot 2026-02-08 152000](https://github.com/user-attachments/assets/d335fa16-2a23-4716-aae4-ed2aea246899)
 
 **Business Interpretation:**  
 This query returns all current course registrations with complete student and course details. Academic advisors use this to monitor student course loads, identify students taking courses outside their major (potential double majors), and ensure equitable enrollment distribution across course sections. The result excludes dropped or withdrawn enrollments, providing a clean view of active academic commitments.
